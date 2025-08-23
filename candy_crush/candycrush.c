@@ -29,7 +29,7 @@ int main(){
         if ((d+2<10) && (m[d][f]==m[d+1][f] && m[d][f]==m[d+2][f])){ //Procurando se tem 3 iguais na vertical de cima para baixo.
             p=p+1; //soma de pontos
             for (i=d;i<=d+2;i++){ //transforma os simbolos em "@"
-                m1[i][f]=64;
+                m1[i][f]=64; //Coloco os arrobas numa matriz auxiliar
             }
         }
         if ((d-2>=0)&&(m[d][f]==m[d-1][f] && m[d][f]==m[d-2][f])){ //Procurando se tem 3 iguais na vertical de baixo para cima.
