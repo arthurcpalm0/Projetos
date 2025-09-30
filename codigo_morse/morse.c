@@ -13,16 +13,16 @@ char traduzir (char codigo[]){
             return 'A'+i;
         }
     }
-    return(' ');
+    return ' ';
 }
 void sugestao(char codigo[]){
     printf("[");
     for (int i=0;i<26;i++){
         if (strncmp(morse[i],codigo,strlen(codigo))==0){
-            printf("%c",'A'+i);
+            printf("%c", 'A'+i);
         }
     }
-    printf ("] ");
+    printf ("]");
 }
 void separar_string(char v[], int n){
     char codigo[10];
@@ -35,6 +35,7 @@ void separar_string(char v[], int n){
             espacos = 0;
         }
         else if(v[i]=='*'){
+            codigo[cont]='\0';
             sugestao(codigo);
             cont = 0;
             codigo[0]='\0';
