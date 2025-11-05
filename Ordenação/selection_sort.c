@@ -3,17 +3,17 @@
 #include <time.h>
 
 void selection_sort(int v[], int n){
-    for (int i=0;i<n-1;i++){
+    for (int i=0;i<n;i++){
         int min = i;
-        for (int j = i+1; j<n;j++){
-            if (v[j]<v[min]){
+        for (int j=i+1;j<n;j++){
+            if (v[min]>v[j]){
                 min = j;
             }
         }
         if (min!=i){
-        int temp = v[min];
-        v[min]=v[i];
-        v[i]=temp;
+            int temp = v[i];
+            v[i] = v[min];
+            v[min] = temp;
         }
     }
 }
